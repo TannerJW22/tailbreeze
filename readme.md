@@ -1,4 +1,3 @@
-:: Tailbreeze ::
 Improves Tailwind CSS className readability, re-usability, and organization.
 
 // {1} Import Tailbreeze using "npm install tailbreeze"

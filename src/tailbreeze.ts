@@ -111,8 +111,21 @@ class Tailbreeze {
 				string = string.concat(` ${x[i]}`);
 			}
 		}
+		string = string.replace(/default:/g, "");
 		return string;
 	}
 }
 
 module.exports = Tailbreeze;
+
+const loginButton = Tailbreeze.model({
+	layout: "py-2 px-3 w-full",
+	background: {
+		default: "bg-black",
+		hover: "bg-red-900",
+	},
+	typography: "text-white",
+	border: "border border-white rounded-lg",
+});
+
+console.log(loginButton.toString()); // <<--*
