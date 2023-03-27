@@ -1,4 +1,4 @@
-# **Tailbreeze**
+# **Tailbreeze v0.2.0**
 
 Tailbreeze allows you to store your Tailwind class names in an object of your own design, using whatever key-value pairs you find relevant, improving readability, reusability, and organization.
 
