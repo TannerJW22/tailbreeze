@@ -4,8 +4,8 @@ Tailbreeze allows you to store your Tailwind class names in an object of your ow
 
 Values in Tailbreeze objects must be a string or another Tailbreeze object. Embedded Tailbreeze objects are recursively stringified and the entire object is combined into one valid Tailwind CSS className.
 
-Github: https://github.com/TannerJW22/tailbreeze
-NPM: https://www.npmjs.com/package/tailbreeze
+[Github](https://github.com/TannerJW22/tailbreeze)
+[NPM](https://www.npmjs.com/package/tailbreeze)
 
 ---
 
@@ -29,7 +29,6 @@ import { tailbreeze } from "tailbreeze";
 
 export default function NavHeader() {
   return (
-
     <div>
       <button className={uploadButton}>
       <FiUpload className={uploadIcon} />

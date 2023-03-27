@@ -13,7 +13,7 @@ export type TailbreezeConfigInterface = {
 }; // <<--| Implementation Pending...
 
 export interface TailbreezeModel {
-	[key: string]: string;
+	key: string | object;
 }
 
 export function tailbreeze(model: TailbreezeModel): string {
@@ -21,7 +21,7 @@ export function tailbreeze(model: TailbreezeModel): string {
 	for (const [key, val] of Object.entries(model)) {
 		if (typeof val === "string") {
 			arr.push(val);
-		} else if (typeof val === "object") {
+		} else if (typeof val === "object" && Object.keys(val).length !== 0) {
 			const subarr = tailbreeze(val);
 			arr = arr.concat(subarr);
 		} else {

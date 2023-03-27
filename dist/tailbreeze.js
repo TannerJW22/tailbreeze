@@ -8,7 +8,7 @@ function tailbreeze(model) {
         if (typeof val === "string") {
             arr.push(val);
         }
-        else if (typeof val === "object") {
+        else if (typeof val === "object" && Object.keys(val).length !== 0) {
             var subarr = tailbreeze(val);
             arr = arr.concat(subarr);
         }

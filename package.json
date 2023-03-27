@@ -1,7 +1,7 @@
 {
 	"name": "tailbreeze",
 	"description": "Improves Tailwind CSS className readability, re-usability, and organization.",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"main": "./dist/tailbreeze.js",
 	"devDependencies": {
 		"@types/node": "^18.15.8",
@@ -12,7 +12,5 @@
 	},
 	"author": "TannerJW22",
 	"license": "ISC",
-	"dependencies": {
-		"clsx": "^1.2.1"
-	}
+	"dependencies": {}
 }

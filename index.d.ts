@@ -13,7 +13,7 @@ export type TailbreezeConfigInterface = {
 };
 
 export interface TailbreezeModel {
-	[key: string]: string;
+	[key: string]: string | object;
 }
 
 export function tailbreeze(model: TailbreezeModel): string;
