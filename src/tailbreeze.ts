@@ -10,22 +10,26 @@ export type TailbreezeConfigInterface = {
 	lg?: string;
 	xl?: string;
 	"2xl"?: string;
-};
+}; // <<--| Implementation Pending...
 
 export interface TailbreezeModel {
-	[key: string]: string | TailbreezeConfigInterface;
+	[key: string]: string;
 }
 
-export function tailbreeze(model: TailbreezeModel) {
-	let className: string = "";
+export function tailbreeze(model: TailbreezeModel): string {
+	let arr: string[] = [];
 	for (const [key, val] of Object.entries(model)) {
 		if (typeof val === "string") {
-			className = className.concat(` ${val} `);
+			arr.push(val);
+		} else if (typeof val === "object") {
+			const subarr = tailbreeze(val);
+			arr = arr.concat(subarr);
 		} else {
-			console.log(`Tailbreeze Error: "${key}" is not a string.`); // <<--*
-			return;
+			console.log(`Tailbreeze Error: "${key}" is not a string or object.`);
+			return `Tailbreeze Error: "${key}" is not a string or object.`;
 		}
 	}
-	className = className.trim().replace(/\s+/g, " ");
-	return className;
+	arr.filter(className => className !== "");
+	let classNames = arr.join(" ");
+	return classNames;
 }
